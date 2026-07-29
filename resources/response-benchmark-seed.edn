@@ -1,0 +1,35 @@
+;; resources/response-benchmark-seed.edn
+;;
+;; Every observation is aggregate-only: :cohort-id is country x sector and
+;; nothing in here identifies a firm. :case-ref is an opaque handle so a
+;; number can be traced to its citation without naming anyone.
+;;
+;; THERE IS ONE CASE IN HERE. That is not a placeholder to be embarrassed
+;; about -- it is the finding. n=1 cannot support a median (which needs 5),
+;; let alone a p90 (29) or a p99 (299). A benchmark that reported a
+;; percentile from this file would be manufacturing one, and the tests
+;; assert that it refuses to.
+;;
+;; Sector uses ISIC Rev.5 codes, matching the cloud-itonami compliance-fact
+;; family's own :isic convention. 6201 = computer programming activities.
+
+[{:cohort-id {:country "JPN" :sector "6201"}
+  :phase :bank-warning
+  :hours 4.317
+  :observed-at "2026-07-24"
+  :case-ref "jp-corporate-vishing-2026-07"
+  :source "特別調査委員会報告書 (2026-07-24 公表) の報道: coki.jp/article/news/89967 / news.yahoo.co.jp/expert/articles/88b665c4276a6dc50af7306101a442fda6caa5a8 (山口健太, 2026-07-25). 初回送金 11:41 から、銀行が『9999万円の移動は詐欺の際によくある金額』と伝えるまで。"}
+
+ {:cohort-id {:country "JPN" :sector "6201"}
+  :phase :detection
+  :hours 26.967
+  :observed-at "2026-07-24"
+  :case-ref "jp-corporate-vishing-2026-07"
+  :source "同上。初回送金から詐欺と認識するまで。送金ウィンドウ 23.317 時間を超えている — 認識は資金が出きった後であった。"}
+
+ {:cohort-id {:country "JPN" :sector "6201"}
+  :phase :public-report
+  :hours 2280
+  :observed-at "2026-07-24"
+  :case-ref "jp-corporate-vishing-2026-07"
+  :source "同上。認識から特別調査委員会報告書の公表まで 95 日 = 2,280 時間。"}]
