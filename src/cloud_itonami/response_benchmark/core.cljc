@@ -61,7 +61,7 @@
 
   A plain function library. No I/O, no ledger, no governor, no actor --
   the `cloud-itonami-regulatory-tracker` / `-pooled-incidence` posture."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [cloud-itonami.pooled-incidence.core :as pi]))
 
 ;; ---------------------------------------------------------------------------
