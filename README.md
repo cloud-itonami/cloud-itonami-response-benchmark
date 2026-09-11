@@ -131,12 +131,12 @@ representation.
 
 ```bash
 # nbb
-nbb --classpath "src:test:resources:../cloud-itonami-pooled-incidence/src:../../kotoba-lang/dynamics/src" \
+kbb --backend sci --classpath "src:test:resources:../cloud-itonami-pooled-incidence/src:../../kotoba-lang/dynamics/src" \
     test/run_tests.cljk
 
 # JVM
-clojure -M:test
-clojure -M:lint
+kbb -M:test
+kbb -M:lint
 ```
 
 ## License
