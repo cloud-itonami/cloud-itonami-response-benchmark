@@ -40,7 +40,7 @@ jobs:
       - run: npm install -g nbb
       - name: nbb test
         working-directory: orgs/cloud-itonami/cloud-itonami-response-benchmark
-        run: nbb --classpath "src:test:resources:../cloud-itonami-pooled-incidence/src:../../kotoba-lang/dynamics/src" test/run_tests.cljs
+        run: nbb --classpath "src:test:resources:../cloud-itonami-pooled-incidence/src:../../kotoba-lang/dynamics/src" test/run_tests.cljk
 
   test-jvm:
     runs-on: ubuntu-latest
