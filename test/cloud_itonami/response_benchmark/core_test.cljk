@@ -1,5 +1,5 @@
 (ns cloud-itonami.response-benchmark.core-test
-  (:require #?(:clj [clojure.test :refer [deftest is testing]]
+  (:require #?(:clj [kotoba.test :refer [deftest is testing]]
                :cljs [cljs.test :refer [deftest is testing]])
             #?(:cljs [cljs.reader :as reader])
             #?(:cljs ["fs" :as fs])
